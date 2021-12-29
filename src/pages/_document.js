@@ -40,9 +40,8 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
           <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
-            integrity="undefined"
-            crossorigin="anonymous"
+            src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+            crossOrigin="anonymous"
           ></script>
         </body>
       </Html>
