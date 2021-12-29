@@ -37,13 +37,31 @@ const GlobalStyles = createGlobalStyle`
   .navbar-light .navbar-toggler{
     border:none;
   }
+  .navbar-light .container{
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 48px;
+  }
+  @media screen and (max-width:520px){
+    .navbar-light .container{
+      
+      padding: 0 16px;
+    }
+  }
 
+ 
   .navbar .navbar-brand,
   .navbar-light .navbar-nav .nav-link{
     color:rgba(255,255,255,0.75);
     transition:transform .3s ease-in-out, color 0.3s ease-in-out;
     padding-right:8px;
     padding-left:8px;
+  }
+  .navbar .navbar-brand{
+    padding:0;
+    display: flex;
+    align-items: center;
+    
   }
   @media screen and (max-width:768px){
     .navbar-light .navbar-nav .nav-link{

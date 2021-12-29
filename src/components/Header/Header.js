@@ -3,7 +3,7 @@ import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
 import { Span, SocialIcons } from './HeaderStyles';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
@@ -21,23 +21,27 @@ const Header = () => {
     <Navbar bg="transparent" expand="md">
       <Container>
         <Navbar.Brand href="/">
-          <DiCssdeck size={'3rem'} style={{ marginBottom: '0.75rem' }} />
+          <DiCssdeck size={'3rem'} />
           <Span>Portfolio</Span>
         </Navbar.Brand>
         <div className="d-flex d-md-none">
-          <Link href="https://github.com/IbrahimMourad" passHref>
-            <Nav.Link target="_blank" rel="noreferrer">
-              <SocialIcons>
-                <AiFillGithub size={'3rem'} />
-              </SocialIcons>
-            </Nav.Link>
+          <Link
+            href="https://github.com/IbrahimMourad"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <SocialIcons>
+              <AiFillGithub size={'3rem'} />
+            </SocialIcons>
           </Link>
-          <Link href="https://www.linkedin.com/in/ibrahimmourad97/" passHref>
-            <Nav.Link target="_blank" rel="noreferrer">
-              <SocialIcons>
-                <AiFillLinkedin size={'3rem'} />
-              </SocialIcons>
-            </Nav.Link>
+          <Link
+            href="https://www.linkedin.com/in/ibrahimmourad97/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <SocialIcons>
+              <AiFillLinkedin size={'3rem'} />
+            </SocialIcons>
           </Link>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
