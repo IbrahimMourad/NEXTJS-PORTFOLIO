@@ -2,17 +2,9 @@ import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-  // Container,
-  Div1,
-  Div2,
-  Div3,
-  NavLink,
-  SocialIcons,
-  Span,
-} from './HeaderStyles';
+import { Span, SocialIcons } from './HeaderStyles';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
   const img1 =
@@ -33,12 +25,20 @@ const Header = () => {
           <Span>Portfolio</Span>
         </Navbar.Brand>
         <div className="d-flex d-md-none">
-          <SocialIcons href="https://github.com/IbrahimMourad">
-            <AiFillGithub size={'3rem'} />
-          </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/ibrahimmourad97/">
-            <AiFillLinkedin size={'3rem'} />
-          </SocialIcons>
+          <Link href="https://github.com/IbrahimMourad" passHref>
+            <Nav.Link target="_blank" rel="noreferrer">
+              <SocialIcons>
+                <AiFillGithub size={'3rem'} />
+              </SocialIcons>
+            </Nav.Link>
+          </Link>
+          <Link href="https://www.linkedin.com/in/ibrahimmourad97/" passHref>
+            <Nav.Link target="_blank" rel="noreferrer">
+              <SocialIcons>
+                <AiFillLinkedin size={'3rem'} />
+              </SocialIcons>
+            </Nav.Link>
+          </Link>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             onClick={changeOpacity}
@@ -46,28 +46,39 @@ const Header = () => {
         </div>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-md-center">
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#tech">Technologies</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link
-              href="https://github.com/IbrahimMourad"
-              className="px-0 d-none d-md-block"
-            >
-              <SocialIcons>
-                <AiFillGithub size={'3rem'} />
-              </SocialIcons>
-            </Nav.Link>
-            <Nav.Link
-              href="https://github.com/IbrahimMourad"
-              className="px-0 d-none d-md-block"
-            >
-              <SocialIcons>
-                <AiFillLinkedin size={'3rem'} />
-              </SocialIcons>
-            </Nav.Link>
+            <Link href="#projects" passHref>
+              <Nav.Link>Projects</Nav.Link>
+            </Link>
+            <Link href="#tech" passHref>
+              <Nav.Link>Technologies</Nav.Link>
+            </Link>
+            <Link href="#about" passHref>
+              <Nav.Link>About</Nav.Link>
+            </Link>
+            <Link href="https://github.com/IbrahimMourad" passHref>
+              <Nav.Link
+                className="px-0 d-none d-md-block"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SocialIcons>
+                  <AiFillGithub size={'3rem'} />
+                </SocialIcons>
+              </Nav.Link>
+            </Link>
+            <Link href="https://www.linkedin.com/in/ibrahimmourad97/" passHref>
+              <Nav.Link
+                className="px-0 d-none d-md-block"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SocialIcons>
+                  <AiFillLinkedin size={'3rem'} />
+                </SocialIcons>
+              </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
-        <div className="d-none d-md-flex"></div>
       </Container>
     </Navbar>
   );
