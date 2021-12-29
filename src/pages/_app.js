@@ -1,13 +1,15 @@
-import { useEffect } from 'react';
+import Header from '../components/Header/Header';
+import { Container } from '../components/Layout/LayoutStyles';
+
 import Theme from '../styles/theme';
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    import('bootstrap/dist/js/bootstrap.js');
-  }, []);
   return (
     <>
       <Theme>
+        <Container>
+          <Header />
+        </Container>
         <Component {...pageProps} />
       </Theme>
     </>
