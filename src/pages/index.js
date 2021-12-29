@@ -5,15 +5,16 @@ import Projects from '../components/Projects/Projects';
 import Technologies from '../components/Technologies/Technologies';
 import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
-import { Section } from '../styles/GlobalComponents';
+import { AnimationSection } from '../styles/GlobalComponents';
 
 const Home = () => {
   return (
     <Layout>
-      <Section grid>
+      <AnimationSection>
         <Hero />
         <BgAnimation />
-      </Section>
+      </AnimationSection>
+
       <Projects />
       <Technologies />
       <Timeline />

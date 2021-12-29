@@ -1,7 +1,8 @@
 import React from 'react';
+import { AnimationContainer } from './AnimationStyles';
 
 const BackgroundAnimation = () => (
-  <div>
+  <AnimationContainer>
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
@@ -359,7 +360,7 @@ const BackgroundAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
-  </div>
+  </AnimationContainer>
 );
 
 export default BackgroundAnimation;
